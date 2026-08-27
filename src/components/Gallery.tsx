@@ -104,7 +104,8 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
             }
           }}
           onError={() => setPhotoFailed(true)}
-          className={`absolute inset-0 h-full w-full object-cover transition-[opacity,transform] duration-700 ease-out group-hover:scale-110 ${
+          style={{ willChange: "transform" }}
+          className={`absolute inset-0 h-full w-full object-cover transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110 ${
             photoLoaded ? "opacity-100" : "opacity-0"
           }`}
         />
@@ -113,12 +114,12 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_45%)]" />
       <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/25 to-transparent" />
 
-      <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/70 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+      <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/70 opacity-0 backdrop-blur-sm transition-opacity duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:opacity-100">
         <Camera className="h-4 w-4" />
       </span>
 
       <div className="absolute inset-x-0 bottom-0 flex flex-col gap-3 p-6">
-        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white backdrop-blur-sm transition-transform duration-500 group-hover:-translate-y-1">
+        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white backdrop-blur-sm transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1">
           <Icon className="h-5 w-5" strokeWidth={1.75} />
         </span>
         <div>

@@ -17,6 +17,9 @@ const year = new Date().getFullYear();
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy-950 pt-20 text-white">
+      {/* Softens the hard seam where the light section above meets this
+          dark footer, instead of cutting straight from mist-2 to navy-950. */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-mist-2 to-navy-950" />
       <div className="pointer-events-none absolute inset-x-0 -top-24 h-48 bg-[radial-gradient(50%_100%_at_50%_100%,rgba(28,111,239,0.15),transparent)]" />
       <div className="container-px relative mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-12 pb-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.9fr_1fr]">
