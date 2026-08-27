@@ -126,9 +126,9 @@ export default function Gallery() {
     <section id="gallery" className="section-pad bg-navy-950">
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Our Work"
+          eyebrow="Gallery"
           title="See the difference, in real time."
-          description="Drag the slider to see the kind of transformation our crews deliver on every repipe and repair across Spokane."
+          description="A look at recent jobs across Spokane — drag the slider below to see the kind of transformation our crews deliver on every repipe and repair."
           light
         />
 

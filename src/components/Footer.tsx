@@ -74,7 +74,7 @@ export default function Footer() {
               {[
                 ["Why Us", "#why-us"],
                 ["Our Process", "#process"],
-                ["Our Work", "#gallery"],
+                ["Gallery", "#gallery"],
                 ["Reviews", "#testimonials"],
                 ["FAQ", "#faq"],
                 ["Contact", "#contact"],

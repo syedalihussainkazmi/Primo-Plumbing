@@ -204,12 +204,15 @@ h4,
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* Kill only the large, continuous, looping motion (floats, glow pulses,
+     the marquee, parallax-driven transforms) — brief, user-triggered hover
+     and focus transitions stay smooth, since they're momentary and don't
+     trigger the vestibular issues this preference exists for. */
   *,
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
 }
