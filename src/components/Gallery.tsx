@@ -30,7 +30,7 @@ const projects: Project[] = [
     title: "Tankless Water Heater Install",
     location: "North Spokane, WA",
     gradient: "from-[#1c6fef] to-[#0a1c30]",
-    photoKeywords: "water-heater,plumbing",
+    photoKeywords: "boiler,mechanical-room",
   },
   {
     icon: Wrench,
@@ -104,10 +104,9 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
             }
           }}
           onError={() => setPhotoFailed(true)}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 group-hover:scale-110 ${
+          className={`absolute inset-0 h-full w-full object-cover transition-[opacity,transform] duration-700 ease-out group-hover:scale-110 ${
             photoLoaded ? "opacity-100" : "opacity-0"
           }`}
-          style={{ transitionProperty: "opacity, transform", transitionDuration: "500ms, 700ms" }}
         />
       )}
 
