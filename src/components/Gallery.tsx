@@ -72,6 +72,7 @@ const projects: Project[] = [
 function ProjectCard({ project, delay }: { project: Project; delay: number }) {
   const Icon = project.icon;
   const [photoFailed, setPhotoFailed] = useState(false);
+  const [photoLoaded, setPhotoLoaded] = useState(false);
 
   return (
     <motion.div
@@ -82,7 +83,7 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
       className="card-hover group relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10"
     >
       {/* Gradient base — always present; the real photo layers on top and this
-          shows straight through if the photo fails to load. */}
+          shows straight through if the photo fails (or never becomes visible). */}
       <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient}`} />
 
       {!photoFailed && (
@@ -91,8 +92,22 @@ function ProjectCard({ project, delay }: { project: Project; delay: number }) {
           src={`https://loremflickr.com/800/600/${project.photoKeywords}`}
           alt={project.title}
           loading="lazy"
+          onLoad={(e) => {
+            // Some placeholder services return a "successful" response with a
+            // tiny error/stub image instead of a real HTTP error — a real
+            // photo is never this small, so treat it as a failure too.
+            const img = e.currentTarget;
+            if (img.naturalWidth < 150 || img.naturalHeight < 150) {
+              setPhotoFailed(true);
+            } else {
+              setPhotoLoaded(true);
+            }
+          }}
           onError={() => setPhotoFailed(true)}
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 group-hover:scale-110 ${
+            photoLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ transitionProperty: "opacity, transform", transitionDuration: "500ms, 700ms" }}
         />
       )}
 
