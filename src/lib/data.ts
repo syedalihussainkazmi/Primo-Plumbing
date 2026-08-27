@@ -172,6 +172,7 @@ export const testimonials = [
     rating: 5,
     text: "They answered on the first ring during a burst pipe emergency and had a technician at our door within the hour. Professional, fast, and the pricing was exactly what they quoted — no surprises.",
     service: "Emergency Leak Repair",
+    avatarId: 47,
   },
   {
     name: "David Ostrander",
@@ -179,6 +180,7 @@ export const testimonials = [
     rating: 5,
     text: "Steve's crew repiped our entire house in two days with zero drama. They protected our floors, cleaned up every night, and walked us through everything before touching a single pipe.",
     service: "Whole-Home Repipe",
+    avatarId: 12,
   },
   {
     name: "Priya Nair",
@@ -186,6 +188,7 @@ export const testimonials = [
     rating: 5,
     text: "Our tankless water heater install was flawless. The technician was knowledgeable, respectful of our home, and even followed up a week later to make sure everything was running perfectly.",
     service: "Tankless Water Heater",
+    avatarId: 29,
   },
   {
     name: "Alan Whitfield",
@@ -193,6 +196,7 @@ export const testimonials = [
     rating: 5,
     text: "Best drain cleaning experience we've had. They used a camera to show us exactly what was going on before recommending anything. Honest, transparent, and genuinely good people.",
     service: "Hydro-Jet Drain Cleaning",
+    avatarId: 33,
   },
 ] as const;
 

@@ -22,6 +22,39 @@ const avatarGradients = [
   "from-cyan to-primary-dark",
 ];
 
+function Avatar({
+  name,
+  avatarId,
+  gradient,
+}: {
+  name: string;
+  avatarId: number;
+  gradient: string;
+}) {
+  const [photoLoaded, setPhotoLoaded] = useState(false);
+  const [photoFailed, setPhotoFailed] = useState(false);
+
+  return (
+    <span
+      className={`relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br text-sm font-semibold text-white ring-2 ring-white shadow-sm ${gradient}`}
+    >
+      {initialsOf(name)}
+      {!photoFailed && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={`https://i.pravatar.cc/96?img=${avatarId}`}
+          alt=""
+          onLoad={() => setPhotoLoaded(true)}
+          onError={() => setPhotoFailed(true)}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
+            photoLoaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      )}
+    </span>
+  );
+}
+
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -66,13 +99,11 @@ export default function Testimonials() {
                   &ldquo;{active.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-4 pt-4">
-                  <span
-                    className={`flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br text-sm font-semibold text-white ${
-                      avatarGradients[index % avatarGradients.length]
-                    }`}
-                  >
-                    {initialsOf(active.name)}
-                  </span>
+                  <Avatar
+                    name={active.name}
+                    avatarId={active.avatarId}
+                    gradient={avatarGradients[index % avatarGradients.length]}
+                  />
                   <div>
                     <p className="font-semibold text-ink">{active.name}</p>
                     <p className="text-sm text-slate">

@@ -38,15 +38,19 @@ export default function Navbar() {
           className={`flex w-full max-w-6xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500 sm:px-6 ${
             scrolled
               ? "glass shadow-[0_8px_40px_-12px_rgba(10,28,48,0.25)]"
-              : "border border-transparent bg-transparent"
+              : "glass-dark shadow-[0_8px_32px_-16px_rgba(0,0,0,0.4)]"
           }`}
         >
           <a href="#top" className="flex items-center gap-2.5">
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-navy-900 shadow-[0_0_20px_rgba(28,111,239,0.45)]">
               <Droplet className="h-4.5 w-4.5 text-white" strokeWidth={2} />
             </span>
-            <span className="font-display text-lg font-semibold tracking-tight text-ink">
-              Primo<span className="text-primary">.</span>
+            <span
+              className={`font-display text-lg font-semibold tracking-tight transition-colors duration-500 ${
+                scrolled ? "text-ink" : "text-white"
+              }`}
+            >
+              Primo<span className="text-cyan">.</span>
             </span>
           </a>
 
@@ -55,10 +59,12 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="group relative rounded-full px-4 py-2 text-sm font-medium text-slate transition-colors hover:text-ink"
+                className={`group relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${
+                  scrolled ? "text-slate hover:text-ink" : "text-white/70 hover:text-white"
+                }`}
               >
                 {link.label}
-                <span className="absolute inset-x-4 -bottom-0.5 h-px scale-x-0 bg-gradient-to-r from-primary to-cyan transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute inset-x-4 -bottom-0.5 h-px scale-x-0 bg-gradient-to-r from-primary to-cyan transition-transform duration-300 ease-out group-hover:scale-x-100" />
               </a>
             ))}
           </nav>
@@ -66,14 +72,16 @@ export default function Navbar() {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href={brand.phoneHref}
-              className="flex items-center gap-2 text-sm font-semibold text-ink"
+              className={`flex items-center gap-2 text-sm font-semibold transition-colors duration-500 ${
+                scrolled ? "text-ink" : "text-white"
+              }`}
             >
               <Phone className="h-3.5 w-3.5 text-copper" />
               {brand.phone}
             </a>
             <MagneticButton
               href="#contact"
-              className="bg-gradient-to-r from-primary to-cyan px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(28,111,239,0.55)]"
+              className="bg-gradient-to-r from-primary to-cyan px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(28,111,239,0.55)] transition-shadow duration-300 hover:shadow-[0_10px_32px_-6px_rgba(28,111,239,0.7)]"
             >
               Get Free Quote
             </MagneticButton>
@@ -81,7 +89,11 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white/70 text-ink lg:hidden"
+            className={`flex h-10 w-10 items-center justify-center rounded-full border transition-colors duration-500 lg:hidden ${
+              scrolled
+                ? "border-line bg-white/70 text-ink"
+                : "border-white/15 bg-white/10 text-white"
+            }`}
             aria-label="Open menu"
           >
             <Menu className="h-5 w-5" />
