@@ -13,7 +13,7 @@ export default function Preloader() {
 
     let raf: number;
     const start = performance.now();
-    const duration = 1700;
+    const duration = 4000;
 
     const tick = (now: number) => {
       const elapsed = now - start;

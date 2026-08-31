@@ -73,7 +73,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.9 }}
+            transition={{ duration: 0.6, delay: 4.2 }}
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-ember"
           >
             <span className="relative flex h-2 w-2">
@@ -86,7 +86,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 2.0 }}
+            transition={{ duration: 0.7, delay: 4.3 }}
             className="text-balance font-display text-[11vw] font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[4.6rem]"
           >
             Train for the
@@ -99,7 +99,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 2.15 }}
+            transition={{ duration: 0.7, delay: 4.45 }}
             className="max-w-lg text-balance text-lg leading-relaxed text-white/60"
           >
             Doomsday Combat Fitness is {brand.city}&rsquo;s home for MMA, Muay
@@ -111,7 +111,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 2.3 }}
+            transition={{ duration: 0.7, delay: 4.6 }}
             className="flex flex-col gap-4 sm:flex-row sm:items-center"
           >
             <MagneticButton
@@ -133,7 +133,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 2.5 }}
+            transition={{ duration: 0.7, delay: 4.8 }}
             className="flex flex-wrap items-center gap-6 pt-4 text-white/50"
           >
             <div className="flex items-center gap-1.5">
@@ -174,9 +174,9 @@ export default function Hero() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0, y: [0, -14, 0] }}
               transition={{
-                opacity: { delay: 2.6, duration: 0.6 },
-                x: { delay: 2.6, duration: 0.6 },
-                y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2.6 },
+                opacity: { delay: 4.9, duration: 0.6 },
+                x: { delay: 4.9, duration: 0.6 },
+                y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 4.9 },
               }}
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-ember/20 text-ember">
@@ -196,9 +196,9 @@ export default function Hero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0, y: [0, 16, 0] }}
               transition={{
-                opacity: { delay: 2.75, duration: 0.6 },
-                x: { delay: 2.75, duration: 0.6 },
-                y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2.75 },
+                opacity: { delay: 5.05, duration: 0.6 },
+                x: { delay: 5.05, duration: 0.6 },
+                y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 5.05 },
               }}
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold/20 text-gold">
@@ -215,8 +215,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: [0, -12, 0] }}
               transition={{
-                opacity: { delay: 2.9, duration: 0.6 },
-                y: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 2.9 },
+                opacity: { delay: 5.2, duration: 0.6 },
+                y: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 5.2 },
               }}
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/20 text-primary-light">
@@ -235,7 +235,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3.1, duration: 0.6 }}
+        transition={{ delay: 5.4, duration: 0.6 }}
         style={{ opacity: fade }}
         className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-white/40"
       >
