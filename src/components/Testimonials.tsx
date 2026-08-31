@@ -16,10 +16,10 @@ function initialsOf(name: string) {
 }
 
 const avatarGradients = [
-  "from-primary to-cyan",
-  "from-copper to-copper-light",
-  "from-navy-800 to-primary",
-  "from-cyan to-primary-dark",
+  "from-primary to-ember",
+  "from-gold to-gold-light",
+  "from-void-800 to-primary",
+  "from-ember to-primary-dark",
 ];
 
 function Avatar({
@@ -71,13 +71,13 @@ export default function Testimonials() {
       <div className="pointer-events-none absolute left-1/2 top-0 h-96 w-[60rem] -translate-x-1/2 rounded-full bg-primary/5 blur-[120px]" />
       <div className="container-px relative mx-auto max-w-5xl">
         <SectionHeading
-          eyebrow="Client Stories"
-          title="Trusted by homeowners across Spokane."
-          description="Real feedback from real customers — because our reputation is built one job at a time."
+          eyebrow="Member Stories"
+          title="Trusted by athletes across every skill level."
+          description="Real feedback from real members — because our reputation is built one class at a time."
         />
 
         <div className="relative mt-16">
-          <div className="relative min-h-[320px] overflow-hidden rounded-[2rem] border border-line bg-white p-8 shadow-[0_20px_60px_-20px_rgba(10,28,48,0.15)] sm:p-12">
+          <div className="relative min-h-[320px] overflow-hidden rounded-[2rem] border border-line bg-white p-8 shadow-[0_20px_60px_-20px_rgba(24,19,15,0.15)] sm:p-12">
             <Quote className="absolute right-8 top-8 h-16 w-16 text-line" strokeWidth={1} />
 
             <AnimatePresence mode="wait" custom={direction}>
@@ -92,7 +92,7 @@ export default function Testimonials() {
               >
                 <div className="flex items-center gap-1">
                   {Array.from({ length: active.rating }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-copper text-copper" />
+                    <Star key={i} className="h-4 w-4 fill-gold text-gold" />
                   ))}
                 </div>
                 <p className="max-w-2xl text-balance font-display text-xl font-medium leading-relaxed text-ink sm:text-2xl">

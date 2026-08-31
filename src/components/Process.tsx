@@ -10,8 +10,8 @@ export default function Process() {
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="How It Works"
-          title="From first call to final test, in four simple steps."
-          description="No jargon, no runaround — just a clear path from problem to permanent fix."
+          title="From free class to first stripe, in four steps."
+          description="No contracts, no intimidation — just a clear path from curious to committed."
         />
 
         <div className="relative mt-20">
@@ -22,7 +22,7 @@ export default function Process() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             style={{ transformOrigin: "left" }}
-            className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-primary via-cyan to-copper lg:block"
+            className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-primary via-ember to-gold lg:block"
           />
 
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -37,13 +37,13 @@ export default function Process() {
                   transition={{ duration: 0.55, delay: i * 0.12 }}
                   className="relative flex flex-col items-start gap-4"
                 >
-                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl border border-line bg-white text-primary shadow-[0_10px_30px_-12px_rgba(10,28,48,0.2)]">
+                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl border border-line bg-white text-primary shadow-[0_10px_30px_-12px_rgba(24,19,15,0.2)]">
                     <Icon className="h-6 w-6" strokeWidth={1.75} />
-                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-copper font-display text-[11px] font-bold text-white">
+                    <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gold font-display text-[11px] font-bold text-void-950">
                       {step.step}
                     </span>
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-ink">
+                  <h3 className="font-display text-lg font-bold text-ink">
                     {step.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-slate">

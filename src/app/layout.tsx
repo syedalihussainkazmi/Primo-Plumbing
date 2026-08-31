@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Unbounded, Inter } from "next/font/google";
 import "./globals.css";
 import CursorGlow from "@/components/CursorGlow";
 import ScrollProgress from "@/components/ScrollProgress";
 import Preloader from "@/components/Preloader";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700", "800", "900"],
 });
 
 const inter = Inter({
@@ -18,20 +18,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Primo Plumbing & Drain | Spokane's Premium Plumbing Experts",
+  title: "Doomsday Combat Fitness | Elite MMA, Muay Thai & BJJ Training",
   description:
-    "Family-owned, licensed & insured plumbing in Spokane, WA for over 30 years. Drain cleaning, water heaters, repiping & 24/7 emergency service — upfront pricing, guaranteed work.",
+    "Doomsday Combat Fitness is your home for MMA, Muay Thai, Brazilian Jiu-Jitsu, boxing & kickboxing coaching — elite instructors, every skill level, one relentless team. Claim your free class today.",
   keywords: [
-    "Spokane plumber",
-    "drain cleaning Spokane",
-    "water heater repair Spokane",
-    "emergency plumber Spokane WA",
-    "Primo Plumbing and Drain",
+    "MMA gym",
+    "Muay Thai classes",
+    "Brazilian Jiu-Jitsu",
+    "boxing gym",
+    "kickboxing fitness",
+    "combat sports training",
+    "Doomsday Combat Fitness",
   ],
   openGraph: {
-    title: "Primo Plumbing & Drain | Spokane's Premium Plumbing Experts",
+    title: "Doomsday Combat Fitness | Elite MMA, Muay Thai & BJJ Training",
     description:
-      "Family-owned, licensed & insured plumbing in Spokane, WA for over 30 years. Upfront pricing, guaranteed work, 24/7 emergency response.",
+      "Elite MMA, Muay Thai, BJJ, boxing & kickboxing coaching for every skill level. Claim your free class today.",
     type: "website",
   },
 };
@@ -40,7 +42,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html lang="en" className={`${unbounded.variable} ${inter.variable}`}>
       <body className="min-h-screen bg-mist text-ink antialiased selection:bg-primary selection:text-white">
         <Preloader />
         <ScrollProgress />

@@ -33,11 +33,11 @@ export default function SectionHeading({
         className={cn(
           "inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em]",
           light
-            ? "border-white/15 bg-white/5 text-cyan"
+            ? "border-white/15 bg-white/5 text-ember"
             : "border-primary/20 bg-primary/5 text-primary-dark"
         )}
       >
-        <span className="h-1.5 w-1.5 rounded-full bg-copper" />
+        <span className="h-1.5 w-1.5 rounded-full bg-gold" />
         {eyebrow}
       </motion.div>
       <motion.h2
@@ -46,7 +46,7 @@ export default function SectionHeading({
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.6, delay: 0.05 }}
         className={cn(
-          "max-w-3xl text-balance font-display text-4xl font-semibold leading-[1.1] tracking-tight md:text-5xl",
+          "max-w-3xl text-balance font-display text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl",
           light ? "text-white" : "text-ink"
         )}
       >

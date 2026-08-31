@@ -14,20 +14,20 @@ import {
 import { brand } from "@/lib/data";
 
 const serviceOptions = [
-  "Drain Cleaning",
-  "Water Heater",
-  "Repipe / Leak Detection",
-  "Fixture / Remodel",
-  "Backflow Prevention",
-  "Gas Line",
-  "Commercial",
-  "Emergency / Other",
+  "Mixed Martial Arts",
+  "Muay Thai",
+  "Brazilian Jiu-Jitsu",
+  "Boxing",
+  "Kickboxing Fitness",
+  "Strength & Conditioning",
+  "Youth Combat Program",
+  "Just Looking Around",
 ];
 
 type Status = "idle" | "submitting" | "success";
 
 const inputClass =
-  "w-full rounded-2xl border border-line bg-mist px-4.5 py-3.5 text-sm text-ink placeholder:text-slate-400 transition-all duration-200 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(28,111,239,0.12)] focus:outline-none";
+  "w-full rounded-2xl border border-line bg-mist px-4.5 py-3.5 text-sm text-ink placeholder:text-slate-400 transition-all duration-200 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(227,56,42,0.12)] focus:outline-none";
 
 export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
@@ -48,28 +48,28 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
-            className="relative flex flex-col justify-between overflow-hidden rounded-[2rem] bg-gradient-to-br from-navy-900 to-navy-950 p-9 text-white"
+            className="relative flex flex-col justify-between overflow-hidden rounded-[2rem] bg-gradient-to-br from-void-900 to-void-950 p-9 text-white"
           >
             <div className="absolute -left-16 -top-16 h-64 w-64 rounded-full bg-primary/20 blur-[100px]" />
             <div className="relative">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-cyan">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-ember">
                 Let&rsquo;s Talk
               </span>
-              <h2 className="mt-6 text-balance font-display text-3xl font-semibold leading-tight sm:text-4xl">
-                Get your free, no-pressure quote today.
+              <h2 className="mt-6 text-balance font-display text-3xl font-bold leading-tight sm:text-4xl">
+                Book your free class today.
               </h2>
               <p className="mt-4 max-w-sm text-white/60">
                 Fill out the form or give us a call — either way, you&rsquo;ll
-                talk to a real Spokane technician, not a call center.
+                talk to a real Doomsday coach, not a call center.
               </p>
             </div>
 
             <div className="relative mt-10 flex flex-col gap-5">
               <a
                 href={brand.phoneHref}
-                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan/40"
+                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-ember/40"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan/15 text-cyan">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-ember/15 text-ember">
                   <Phone className="h-5 w-5" />
                 </span>
                 <div>
@@ -79,7 +79,7 @@ export default function Contact() {
               </a>
               <a
                 href={`mailto:${brand.email}`}
-                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan/40"
+                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-ember/40"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/20 text-primary-light">
                   <Mail className="h-5 w-5" />
@@ -90,11 +90,11 @@ export default function Contact() {
                 </div>
               </a>
               <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-copper/20 text-copper">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold/20 text-gold">
                   <MapPin className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-xs text-white/50">Serving</p>
+                  <p className="text-xs text-white/50">Train with us</p>
                   <p className="font-semibold">{brand.address}</p>
                 </div>
               </div>
@@ -103,8 +103,8 @@ export default function Contact() {
                   <Clock className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-xs text-white/50">Emergency line</p>
-                  <p className="font-semibold">Open 24/7 · 365 days</p>
+                  <p className="text-xs text-white/50">Open</p>
+                  <p className="font-semibold">7 Days a Week · See Schedule</p>
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative overflow-hidden rounded-[2rem] border border-line bg-white p-8 shadow-[0_20px_60px_-24px_rgba(10,28,48,0.18)] sm:p-10"
+            className="relative overflow-hidden rounded-[2rem] border border-line bg-white p-8 shadow-[0_20px_60px_-24px_rgba(24,19,15,0.18)] sm:p-10"
           >
             {status === "success" ? (
               <motion.div
@@ -127,12 +127,13 @@ export default function Contact() {
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <CheckCircle2 className="h-8 w-8" />
                 </span>
-                <h3 className="font-display text-2xl font-semibold text-ink">
+                <h3 className="font-display text-2xl font-bold text-ink">
                   Request received!
                 </h3>
                 <p className="max-w-sm text-slate">
-                  A Primo technician will reach out within the hour. For anything
-                  urgent, call us directly at {brand.phone}.
+                  A Doomsday coach will reach out within the day to confirm
+                  your free class. For anything urgent, call us directly at{" "}
+                  {brand.phone}.
                 </p>
               </motion.div>
             ) : (
@@ -145,7 +146,7 @@ export default function Contact() {
                     <input
                       required
                       type="tel"
-                      placeholder="(509) 000-0000"
+                      placeholder="(555) 000-0000"
                       className={inputClass}
                     />
                   </Field>
@@ -158,10 +159,10 @@ export default function Contact() {
                     className={inputClass}
                   />
                 </Field>
-                <Field label="What do you need help with?">
+                <Field label="Which program interests you?">
                   <select required defaultValue="" className={inputClass}>
                     <option value="" disabled>
-                      Select a service
+                      Select a program
                     </option>
                     {serviceOptions.map((opt) => (
                       <option key={opt} value={opt}>
@@ -173,7 +174,7 @@ export default function Contact() {
                 <Field label="Tell us more">
                   <textarea
                     rows={4}
-                    placeholder="Describe the issue you're experiencing..."
+                    placeholder="Your goals, experience level, or anything else we should know..."
                     className={`${inputClass} resize-none`}
                   />
                 </Field>
@@ -181,7 +182,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="group mt-2 flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-4 text-sm font-semibold text-white transition-colors hover:bg-navy-800 disabled:opacity-70"
+                  className="group mt-2 flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-4 text-sm font-semibold text-white transition-colors hover:bg-void-800 disabled:opacity-70"
                 >
                   {status === "submitting" ? (
                     <>
@@ -190,14 +191,14 @@ export default function Contact() {
                     </>
                   ) : (
                     <>
-                      Request Free Quote
+                      Claim My Free Class
                       <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </>
                   )}
                 </button>
                 <p className="text-center text-xs text-slate/70">
-                  By submitting, you agree to be contacted about your service
-                  request. No spam, ever.
+                  By submitting, you agree to be contacted about your free
+                  class. No spam, ever.
                 </p>
               </form>
             )}

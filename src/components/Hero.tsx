@@ -2,9 +2,9 @@
 
 import { useRef } from "react";
 import { motion, useMotionValue, useScroll, useSpring, useTransform } from "framer-motion";
-import { ArrowRight, ChevronDown, Phone, ShieldCheck, Star, Zap } from "lucide-react";
+import { ArrowRight, ChevronDown, PlayCircle, Star, Users } from "lucide-react";
 import MagneticButton from "./MagneticButton";
-import PipeNetworkArt from "./PipeNetworkArt";
+import ImpactCore from "./ImpactCore";
 import { brand } from "@/lib/data";
 
 export default function Hero() {
@@ -34,12 +34,12 @@ export default function Hero() {
     <section
       id="top"
       ref={sectionRef}
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-navy-950 pt-32 pb-20"
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-void-950 pt-32 pb-20"
       onMouseMove={handleMove}
     >
       {/* Background layers */}
       <motion.div className="pointer-events-none absolute inset-0" style={{ y: bgY }}>
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,#050e1a_0%,#0a1c30_55%,#050e1a_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#0c0907_0%,#1f1710_55%,#0c0907_100%)]" />
         <div
           className="absolute inset-0 opacity-[0.07]"
           style={{
@@ -55,12 +55,12 @@ export default function Hero() {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute -right-40 bottom-0 h-[560px] w-[560px] rounded-full bg-cyan/20 blur-[160px]"
+          className="absolute -right-40 bottom-0 h-[560px] w-[560px] rounded-full bg-ember/20 blur-[160px]"
           animate={{ opacity: [0.5, 0.8, 0.5] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
         <motion.div
-          className="absolute right-1/4 top-1/3 h-[300px] w-[300px] rounded-full bg-copper/20 blur-[120px]"
+          className="absolute right-1/4 top-1/3 h-[300px] w-[300px] rounded-full bg-gold/20 blur-[120px]"
           animate={{ opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
@@ -74,22 +74,25 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.9 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-cyan"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-ember"
           >
-            <ShieldCheck className="h-3.5 w-3.5" />
-            Licensed · Bonded · Insured &nbsp;·&nbsp; {brand.city}
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ember opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-ember" />
+            </span>
+            MMA · Muay Thai · BJJ · Boxing &nbsp;·&nbsp; {brand.city}
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 2.0 }}
-            className="text-balance font-display text-[13vw] font-semibold leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-[5.2rem]"
+            className="text-balance font-display text-[11vw] font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[4.6rem]"
           >
-            Plumbing,
+            Train for the
             <br />
-            <span className="text-gradient bg-gradient-to-r from-white via-cyan to-primary-light bg-clip-text text-transparent">
-              Perfected.
+            <span className="bg-gradient-to-r from-gold-light via-primary-light to-primary bg-clip-text text-transparent">
+              end of weakness.
             </span>
           </motion.h1>
 
@@ -99,9 +102,10 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 2.15 }}
             className="max-w-lg text-balance text-lg leading-relaxed text-white/60"
           >
-            Spokane&rsquo;s family-owned plumbing team, trusted for over{" "}
-            <span className="text-white">30 years</span>. Upfront pricing, master
-            craftsmanship, and a same-day response when it matters most.
+            Doomsday Combat Fitness is {brand.city}&rsquo;s home for MMA, Muay
+            Thai, BJJ, boxing &amp; kickboxing. Elite coaching, a relentless
+            community, and a training system built to forge the strongest
+            version of you. <span className="text-white">All levels. Zero ego.</span>
           </motion.p>
 
           <motion.div
@@ -112,17 +116,17 @@ export default function Hero() {
           >
             <MagneticButton
               href="#contact"
-              className="group bg-gradient-to-r from-primary to-cyan px-7 py-4 text-sm font-semibold text-white shadow-[0_12px_40px_-10px_rgba(34,211,238,0.5)]"
+              className="group bg-gradient-to-r from-primary to-ember px-7 py-4 text-sm font-semibold text-white shadow-[0_12px_40px_-10px_rgba(255,138,43,0.5)]"
             >
-              Get Your Free Quote
+              Claim Your Free Class
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </MagneticButton>
             <MagneticButton
-              href={brand.phoneHref}
+              href="#gallery"
               className="glass-dark border-white/15 px-7 py-4 text-sm font-semibold text-white"
             >
-              <Phone className="h-4 w-4 text-copper" />
-              {brand.phone}
+              <PlayCircle className="h-4 w-4 text-gold" />
+              Watch The Gym
             </MagneticButton>
           </motion.div>
 
@@ -134,15 +138,15 @@ export default function Hero() {
           >
             <div className="flex items-center gap-1.5">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-copper text-copper" />
+                <Star key={i} className="h-4 w-4 fill-gold text-gold" />
               ))}
               <span className="ml-1.5 text-sm font-medium text-white/80">4.9/5</span>
-              <span className="text-sm">from 800+ reviews</span>
+              <span className="text-sm">from 300+ reviews</span>
             </div>
             <div className="hidden h-4 w-px bg-white/15 sm:block" />
             <div className="flex items-center gap-1.5 text-sm">
-              <Zap className="h-3.5 w-3.5 text-cyan" />
-              Emergency crews on standby 24/7
+              <Users className="h-3.5 w-3.5 text-ember" />
+              500+ athletes trained
             </div>
           </motion.div>
         </motion.div>
@@ -161,7 +165,7 @@ export default function Hero() {
             className="relative h-full w-full"
           >
             <div className="absolute inset-8 rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/[0.06] to-transparent">
-              <PipeNetworkArt />
+              <ImpactCore />
             </div>
 
             {/* Floating glass cards */}
@@ -175,12 +179,15 @@ export default function Hero() {
                 y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2.6 },
               }}
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-copper/20 text-copper">
-                <Zap className="h-4.5 w-4.5" />
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-ember/20 text-ember">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ember opacity-75" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-ember" />
+                </span>
               </span>
               <div>
-                <p className="text-xs font-medium text-white/50">Emergency Response</p>
-                <p className="font-display text-sm font-semibold text-white">Under 60 min</p>
+                <p className="text-xs font-medium text-white/50">Next Free Class</p>
+                <p className="font-display text-sm font-semibold text-white">Today · 6:00 PM</p>
               </div>
             </motion.div>
 
@@ -194,8 +201,8 @@ export default function Hero() {
                 y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2.75 },
               }}
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan/20 text-cyan">
-                <Star className="h-4.5 w-4.5 fill-cyan" />
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold/20 text-gold">
+                <Star className="h-4.5 w-4.5 fill-gold" />
               </span>
               <div>
                 <p className="text-xs font-medium text-white/50">Google Rating</p>
@@ -213,11 +220,11 @@ export default function Hero() {
               }}
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/20 text-primary-light">
-                <ShieldCheck className="h-4.5 w-4.5" />
+                <Users className="h-4.5 w-4.5" />
               </span>
               <div>
-                <p className="text-xs font-medium text-white/50">In Business</p>
-                <p className="font-display text-sm font-semibold text-white">30+ Years</p>
+                <p className="text-xs font-medium text-white/50">Athletes Trained</p>
+                <p className="font-display text-sm font-semibold text-white">500+</p>
               </div>
             </motion.div>
           </motion.div>

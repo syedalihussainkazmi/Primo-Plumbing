@@ -24,20 +24,20 @@ export default function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-900 to-navy-950 p-8 text-white"
+            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-void-900 to-void-950 p-8 text-white"
           >
             <div className="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-primary/30 blur-3xl" />
             <p className="relative font-display text-lg font-medium">
               Still have a question?
             </p>
             <p className="relative mt-2 text-sm text-white/60">
-              Talk to a real technician — no call trees, no waiting.
+              Talk to a real coach — no call trees, no waiting.
             </p>
             <MagneticButton
               href={brand.phoneHref}
-              className="relative mt-6 w-full bg-white px-5 py-3.5 text-sm font-semibold text-navy-900"
+              className="relative mt-6 w-full bg-white px-5 py-3.5 text-sm font-semibold text-void-900"
             >
-              <Phone className="h-4 w-4 text-copper" />
+              <Phone className="h-4 w-4 text-primary" />
               {brand.phone}
             </MagneticButton>
           </motion.div>
@@ -52,7 +52,7 @@ export default function FAQ() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 py-5 text-left"
                 >
-                  <span className="font-display text-base font-semibold text-ink sm:text-lg">
+                  <span className="font-display text-base font-bold text-ink sm:text-lg">
                     {faq.question}
                   </span>
                   <motion.span

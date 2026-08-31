@@ -10,9 +10,9 @@ export default function Services() {
     <section id="services" className="section-pad bg-mist">
       <div className="container-px mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="What We Do"
-          title="Full-service plumbing, handled with precision."
-          description="From a stubborn clog to a full repipe, our licensed technicians bring the same premium standard to every job — residential or commercial."
+          eyebrow="Our Programs"
+          title="Seven disciplines. One relentless standard."
+          description="From your first jab to your first fight, our coaches bring the same premium standard to every program — beginner classes through competition prep."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -25,13 +25,13 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.55, delay: (i % 4) * 0.08 }}
-                className="card-hover group relative overflow-hidden rounded-3xl border border-line bg-white p-7 shadow-[0_2px_20px_-8px_rgba(10,28,48,0.08)] hover:border-primary/30 hover:shadow-[0_24px_60px_-20px_rgba(28,111,239,0.25)]"
+                className="card-hover group relative overflow-hidden rounded-3xl border border-line bg-white p-7 shadow-[0_2px_20px_-8px_rgba(24,19,15,0.08)] hover:border-primary/30 hover:shadow-[0_24px_60px_-20px_rgba(227,56,42,0.25)]"
               >
-                <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-primary/10 to-cyan/10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-primary/10 to-ember/10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
 
                 <div className="relative flex h-full flex-col">
                   <div className="mb-6 flex items-start justify-between">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-navy-900 to-primary text-white shadow-[0_8px_20px_-6px_rgba(28,111,239,0.5)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-void-900 to-primary text-white shadow-[0_8px_20px_-6px_rgba(227,56,42,0.5)] transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
                       <Icon className="h-5.5 w-5.5" strokeWidth={1.75} />
                     </span>
                     <span className="rounded-full border border-line bg-mist px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate">
@@ -39,7 +39,7 @@ export default function Services() {
                     </span>
                   </div>
 
-                  <h3 className="font-display text-xl font-semibold text-ink">
+                  <h3 className="font-display text-xl font-bold text-ink">
                     {service.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate">
